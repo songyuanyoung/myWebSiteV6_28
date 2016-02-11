@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery-1.12.0.js"></script>
+    <script type="text/javascript">
+        jQuery.fn.center = function () {
+            $win = $(window);
+            this.css('position','absolute');
+            this.css('top', (($win.height() - this.outerHeight()) / 2) + $win.scrollTop() + 'px');
+            this.css('left', (($win.width() - this.outerWidth()) / 2) + $win.scrollLeft() + 'px');
+            return this;
+        }
+        window.onscroll = $('#logo').center();
+        window.onresize = $('#logo').center();
+        window.onload = $('#logo').center();
+    </script>
+
+</head>
+<body background="images/background.jpg" style="background-size: cover;background-repeat: no-repeat">
+
+<img id="logo" class="logo" src="images/logo.png">
+    <script type="text/javascript">
+
+        window.onscroll = $('#logo').center();
+        window.onresize = $('#logo').center();
+        window.onload = $('#logo').center();
+    </script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+            $(".logo").animate({
+                left:'0px',
+                //right:'150px',
+               top:'0px',
+                opacity:'0.5'},function (){
+                var t=setTimeout("window.location.href='pages/about-o2.html';",1000);
+            });
+    });
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
